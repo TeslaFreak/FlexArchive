@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Login</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="title_activity_main">MainActivity</string>
+    <string-array name="usernames">
+        <item>buffdude92@gmail.com</item>
+        <item>skrawnyBro1776@gmail.com</item>
+        <item>meatHead5000@gmail.com</item>
+    </string-array>
+    <string-array name="expertise">
+        <item>Expertise Level: 2</item>
+        <item>Expertise Level: 2</item>
+        <item>Expertise Level: 2</item>
+    </string-array>
+
+
+    <string-array name="gym_name">
+        <item>Select Gym</item>
+        <item>Genesis</item>
+        <item>Anytime Fitness</item>
+        <item>KU Rec</item>
+    </string-array>
+</resources>

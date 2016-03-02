@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="net.flexpal.liam.login.GymUsageActivity">
+
+
+
+<GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+    android:id="@+id/gridLayoutM"
+        android:rowCount="2"
+        android:columnCount="2"
+    android:orientation="vertical"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="NA"
+            android:id="@+id/tGymName"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_row="0"
+            android:layout_column="0" />
+
+        <com.jjoe64.graphview.GraphView
+            android:layout_width="248dp"
+            android:layout_height="296dp"
+            android:id="@+id/graph"
+            android:layout_below="@+id/tGymPhone"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_toRightOf="@+id/tEquipment"
+            android:layout_toEndOf="@+id/tEquipment"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:layout_gravity="bottom|left|right|top" />
+
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:id="@+id/gridLayoutS"
+            android:rowCount="2"
+            android:columnCount="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NA"
+                android:id="@+id/tGymAddress"
+                android:textSize="20dp"
+                android:layout_below="@+id/tGymName"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_row="0"
+                android:layout_column="0" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NA"
+                android:id="@+id/tGymPhone"
+                android:textSize="20dp"
+                android:layout_below="@+id/tGymAddress"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_row="1"
+                android:layout_column="0" />
+
+        </GridLayout>
+
+    </GridLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Equipment"
+        android:id="@+id/tEquipment"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:layout_below="@+id/gridLayoutM"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="56dp" />
+
+    <GridView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/EquipmentGrid"
+        android:numColumns="2"
+        android:layout_below="@+id/tEquipment"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>
+

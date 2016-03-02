@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".login"
+    android:background="#ffffff">
+    ​
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="97dp"
+        android:id="@+id/flex"
+        android:src="@drawable/flex"
+        android:layout_gravity="center_horizontal"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/gym"
+        android:layout_toLeftOf="@+id/shoulders"
+        android:layout_toStartOf="@+id/shoulders" />
+    ​
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Please select all body parts to workout"
+        android:id="@+id/textView"
+        android:layout_above="@+id/biceps"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    ​
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Biceps"
+        android:id="@+id/biceps"
+        android:layout_above="@+id/shoulders"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:checked="false"
+        android:onClick="selectItem"/>
+    ​
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Triceps                "
+        android:id="@+id/triceps"
+        android:layout_alignTop="@+id/biceps"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="false"
+        android:layout_alignParentBottom="false"
+        android:layout_alignParentRight="false"
+        android:layout_alignWithParentIfMissing="false"
+        android:onClick="selectItem"/>
+    ​
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chest"
+        android:id="@+id/chest"
+        android:layout_above="@+id/legs"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:onClick="selectItem"/>
+    ​
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Shoulders           "
+        android:id="@+id/shoulders"
+        android:layout_alignTop="@+id/chest"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="selectItem"/>
+    ​
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Legs"
+        android:id="@+id/legs"
+        android:checked="false"
+        android:onClick="selectItem"
+        android:layout_above="@+id/back"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    ​
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calves                 "
+        android:id="@+id/calves"
+        android:layout_below="@+id/shoulders"
+        android:layout_alignLeft="@+id/triceps"
+        android:onClick="selectItem" />
+    ​
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:id="@+id/back"
+        android:onClick="selectItem"
+        android:layout_above="@+id/cardio"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    ​
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Abs                       "
+        android:id="@+id/abs"
+        android:layout_alignTop="@+id/back"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="selectItem"/>
+    ​
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cardio"
+        android:id="@+id/cardio"
+        android:onClick="selectItem"
+        android:layout_above="@+id/inTime"
+        android:layout_alignRight="@+id/biceps"
+        android:layout_alignEnd="@+id/biceps" />
+    ​
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:id="@+id/submit"
+        android:onClick="submit_form"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/cardio"
+        android:layout_alignStart="@+id/cardio"/>
+    ​
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="time"
+        android:ems="10"
+        android:id="@+id/inTime"
+        android:hint="In Time"
+        android:layout_above="@+id/submit"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/submit"
+        android:layout_alignEnd="@+id/submit" />
+    ​
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="time"
+        android:ems="10"
+        android:id="@+id/outTime"
+        android:hint="Out Time"
+        android:layout_alignTop="@+id/inTime"
+        android:layout_alignLeft="@+id/shoulders"
+        android:layout_alignStart="@+id/shoulders" />
+    ​
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BACK TO MAIN"
+        android:id="@+id/backButton"
+        android:onClick="back"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/abs"
+        android:layout_alignStart="@+id/abs" />
+    ​
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/gym"
+        android:layout_above="@+id/textView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    ​
+</RelativeLayout>
